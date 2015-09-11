@@ -1,15 +1,15 @@
 package com.example.jrwong.androiddemos;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
+
+import com.example.jrwong.androiddemos.demo1.Demo1Activity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,11 +24,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     {
         // 初始化数据源
-        for (int i = 0 ; i < 20; i++) {
-            HashMap<String, Object> map = new HashMap<>();
-            map.put("title", "试试看");
-            this.dataSource.add(map);
-        }
+        HashMap<String, Object> map ;
+
+        map = new HashMap<>();
+        map.put("title", "demo1");
+        this.dataSource.add(map);
     }
 
     @Override
@@ -55,6 +55,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         switch (position) {
             case 0: {
+
+                Intent intent = new Intent();
+                intent.setClass(this, Demo1Activity.class);
+                startActivity(intent);
 
             }break;
 
