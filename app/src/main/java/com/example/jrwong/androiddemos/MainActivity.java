@@ -47,25 +47,28 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-        Toast.makeText(this,"点击了第" + (position + 1) + "个item", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "点击了第" + (position + 1) + "个item", Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent();
 
         switch (position) {
             case 0: {
-
-                Intent intent = new Intent();
                 intent.setClass(this, Demo1Activity.class);
-                startActivity(intent);
-
             }break;
-
 
             default:
                 break;
         }
+
+        startActivity(intent);
 
     }
 }
