@@ -9,7 +9,9 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
+import com.example.jrwong.androiddemos.demo2.Demo2Activity;
 import com.example.jrwong.androiddemos.demo1.Demo1Activity;
+import com.example.jrwong.androiddemos.demo3.Demo3Activity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,6 +30,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         map = new HashMap<>();
         map.put("title", "demo1");
+        this.dataSource.add(map);
+
+        map = new HashMap<>();
+        map.put("title", "demo2");
+        this.dataSource.add(map);
+
+        map = new HashMap<>();
+        map.put("title", "demo3");
         this.dataSource.add(map);
     }
 
@@ -62,6 +72,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         switch (position) {
             case 0: {
                 intent.setClass(this, Demo1Activity.class);
+            }break;
+
+            case 1: {
+                intent.setClass(this, Demo2Activity.class);
+            }break;
+
+            case 2: {
+                intent.setClass(this, Demo3Activity.class);
             }break;
 
             default:

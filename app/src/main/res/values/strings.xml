@@ -5,4 +5,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_demo1_other">Demo1OtherActivity</string>
     <string name="title_activity_demo1">Demo1Activity</string>
+    <string name="title_activity_demo2">Demo2Activity</string>
+    <string name="title_activity_demo3">Demo3Activity</string>
 </resources>
